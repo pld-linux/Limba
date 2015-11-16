@@ -29,7 +29,6 @@ BuildRequires:	xz
 BuildRequires:	yaml-devel >= 0.1
 Requires:	%{name}-libs = %{version}-%{release}
 Requires:	AppStream >= 0.8.6
-Requires:	glib2 >= 1:2.44
 Requires:	polkit >= 0.104
 # requires overlayfs
 Requires:	uname(release) >= 4.0
@@ -76,6 +75,7 @@ Narzędzia LiCompile.
 Summary:	Limba library
 Summary(pl.UTF-8):	Biblioteka Limba
 Group:		Libraries
+Requires:	glib2 >= 1:2.44
 
 %description libs
 Limba library.
@@ -88,6 +88,7 @@ Summary:	Header files for Limba library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Limba
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
+Requires:	glib2-devel >= 1:2.44
 
 %description devel
 Header files for Limba library.
@@ -103,7 +104,9 @@ Pliki nagłówkowe biblioteki Limba.
 %build
 install -d build
 cd build
+# note: .pc file creation expects CMAKE_INSTALL_LIBDIR relative to CMAKE_INSTALL_PREFIX
 %cmake .. \
+	-DCMAKE_INSTALL_LIBDIR:PATH=%{_lib} \
 	-DDOCUMENTATION=ON \
 	-DLICOMPILE=ON
 %{__make}
