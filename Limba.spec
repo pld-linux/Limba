@@ -13,7 +13,7 @@ BuildRequires:	AppStream-devel >= 0.8.6
 BuildRequires:	cmake >= 2.8.6
 BuildRequires:	curl-devel
 BuildRequires:	gettext-tools
-BuildRequires:	glib2-devel >= 1:2.44
+BuildRequires:	glib2-devel >= 1:2.46
 BuildRequires:	gobject-introspection-devel
 BuildRequires:	gpgme-devel
 BuildRequires:	libarchive-devel
@@ -75,7 +75,7 @@ Narzędzia LiCompile.
 Summary:	Limba library
 Summary(pl.UTF-8):	Biblioteka Limba
 Group:		Libraries
-Requires:	glib2 >= 1:2.44
+Requires:	glib2 >= 1:2.46
 
 %description libs
 Limba library.
@@ -88,7 +88,7 @@ Summary:	Header files for Limba library
 Summary(pl.UTF-8):	Pliki nagłówkowe biblioteki Limba
 Group:		Development/Libraries
 Requires:	%{name}-libs = %{version}-%{release}
-Requires:	glib2-devel >= 1:2.44
+Requires:	glib2-devel >= 1:2.46
 
 %description devel
 Header files for Limba library.
