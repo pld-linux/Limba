@@ -154,8 +154,8 @@ rm -rf $RPM_BUILD_ROOT
 %attr(755,root,root) %{_bindir}/lig++
 %attr(755,root,root) %{_bindir}/ligcc
 %attr(755,root,root) %{_bindir}/relaytool
-%dir %{_libdir}/licompile
-%attr(755,root,root) %{_libdir}/licompile/buildlist
+%dir %{_prefix}/lib/licompile
+%attr(755,root,root) %{_prefix}/lib/licompile/buildlist
 %{_includedir}/licompile
 %{_aclocaldir}/relaytool.m4
 %{_datadir}/licompile
