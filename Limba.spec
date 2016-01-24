@@ -2,14 +2,14 @@
 Summary:	Experimental software installation system
 Summary(pl.UTF-8):	Eksperymentalny system do instalowania oprogramowania
 Name:		Limba
-Version:	0.5.3
+Version:	0.5.5
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	http://people.freedesktop.org/~mak/limba/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	b59a4a3d2cbde2e34318da3ceed43fac
+# Source0-md5:	6bf3cf436850f36789c4fd4191c2c5b4
 URL:		http://people.freedesktop.org/~mak/limba/
-BuildRequires:	AppStream-devel >= 0.8.6
+BuildRequires:	AppStream-devel >= 0.9.0
 BuildRequires:	cmake >= 2.8.6
 BuildRequires:	curl-devel
 BuildRequires:	gettext-tools
@@ -17,6 +17,7 @@ BuildRequires:	glib2-devel >= 1:2.46
 BuildRequires:	gobject-introspection-devel
 BuildRequires:	gpgme-devel
 BuildRequires:	libarchive-devel
+BuildRequires:	libcap-devel >= 2.24
 BuildRequires:	libuuid-devel >= 2.0
 BuildRequires:	pkgconfig
 BuildRequires:	polkit-devel >= 0.104
@@ -28,7 +29,7 @@ BuildRequires:	xmlto
 BuildRequires:	xz
 BuildRequires:	yaml-devel >= 0.1
 Requires:	%{name}-libs = %{version}-%{release}
-Requires:	AppStream >= 0.8.6
+Requires:	AppStream >= 0.9.0
 Requires:	polkit >= 0.104
 # requires overlayfs
 Requires:	uname(release) >= 4.0
@@ -146,7 +147,6 @@ rm -rf $RPM_BUILD_ROOT
 %{_mandir}/man1/limba-build.1*
 %{_mandir}/man1/lipkgen.1*
 %{_mandir}/man1/runapp.1*
-%dir /opt/bundle
 %dir /opt/software
 
 %files compile
