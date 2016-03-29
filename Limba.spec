@@ -2,13 +2,13 @@
 Summary:	Experimental software installation system
 Summary(pl.UTF-8):	Eksperymentalny system do instalowania oprogramowania
 Name:		Limba
-Version:	0.5.5
+Version:	0.5.6
 Release:	1
 License:	LGPL v2.1+
 Group:		Libraries
-Source0:	http://people.freedesktop.org/~mak/limba/releases/%{name}-%{version}.tar.xz
-# Source0-md5:	6bf3cf436850f36789c4fd4191c2c5b4
-URL:		http://people.freedesktop.org/~mak/limba/
+Source0:	https://people.freedesktop.org/~mak/limba/releases/%{name}-%{version}.tar.xz
+# Source0-md5:	aa3fbfef65087e26079510e409d4c443
+URL:		https://people.freedesktop.org/~mak/limba/
 BuildRequires:	AppStream-devel >= 0.9.0
 BuildRequires:	cmake >= 2.8.6
 BuildRequires:	curl-devel
