@@ -3,13 +3,15 @@ Summary:	Experimental software installation system
 Summary(pl.UTF-8):	Eksperymentalny system do instalowania oprogramowania
 Name:		Limba
 Version:	0.5.6
-Release:	1
+Release:	2
 License:	LGPL v2.1+
 Group:		Libraries
 Source0:	https://people.freedesktop.org/~mak/limba/releases/%{name}-%{version}.tar.xz
 # Source0-md5:	aa3fbfef65087e26079510e409d4c443
+# https://github.com/ximion/limba/commit/55c1cdda6766a01d6004aa16955ddf59f9f0c6c9.patch
+Patch0:		%{name}-appstream0.10.patch
 URL:		https://people.freedesktop.org/~mak/limba/
-BuildRequires:	AppStream-devel >= 0.9.0
+BuildRequires:	AppStream-devel >= 0.10.0
 BuildRequires:	cmake >= 2.8.6
 BuildRequires:	curl-devel
 BuildRequires:	gettext-tools
@@ -29,7 +31,7 @@ BuildRequires:	xmlto
 BuildRequires:	xz
 BuildRequires:	yaml-devel >= 0.1
 Requires:	%{name}-libs = %{version}-%{release}
-Requires:	AppStream >= 0.9.0
+Requires:	AppStream >= 0.10.0
 Requires:	polkit >= 0.104
 # requires overlayfs
 Requires:	uname(release) >= 4.0
@@ -99,6 +101,7 @@ Pliki nagłówkowe biblioteki Limba.
 
 %prep
 %setup -q
+%patch0 -p1
 
 %{__sed} -i -e '1s,/usr/bin/env perl,/usr/bin/perl,' contrib/licompile/{lig++,ligcc}
 
