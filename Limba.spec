@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.perl
 Summary:	Experimental software installation system
 Summary(pl.UTF-8):	Eksperymentalny system do instalowania oprogramowania
 Name:		Limba
